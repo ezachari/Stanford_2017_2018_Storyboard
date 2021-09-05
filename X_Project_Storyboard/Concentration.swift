@@ -12,13 +12,11 @@ class Concentration {
     var indexOfFaceUpCard: Int? {
         get {
             var foundIndex: Int?
-            for index in cards.indices {
-                if cards[index].isFaced {
-                    if foundIndex == nil {
-                        foundIndex = index
-                    } else {
-                        return nil
-                    }
+            for index in cards.indices where cards[index].isFaced {
+                if foundIndex == nil {
+                    foundIndex = index
+                } else {
+                    return nil
                 }
             }
             return foundIndex

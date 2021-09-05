@@ -23,6 +23,7 @@ class ConcentrationViewController: UIViewController {
     @IBAction func startNewGame(_ sender: UIButton) {
         emojiChoices = ["👻", "🎃", "🧟‍♀️", "👹", "💀", "👿", "🦇", "🧛🏻‍♀️"]
         emoji = [Int: String]()
+        flipCount = 0
         game.newGame()
         updateViewFromModel()
     }
